@@ -1,67 +1,55 @@
+#include "Classes.cpp"
+#include "FuncoesEProcedimentos.cpp"
 #include <iostream>
-#include <stdio.h>
-#include <stdbool.h>
-//classe pessoa
-class Pessoa{
-    public:
-    char nome[80];
-    int codigo;
-    int telefone;
-};
 
-//classe data
-class Data{
-    public:
-    int dia;
-    int mes;
-    int ano;
-};
-
-//classe endereço
-class Endereco{
-    public:
-    int Numero_Casa;
-    char Nome_Rua[30];
-    int Cep;
-    char Bairro[20];
-};
-
-//classe cliente - herda atributos da classe "Pessoa"
-class Cliente : public Pessoa{
-    public:
-    Endereco Endereco_Cliente;
-};
-
-//classe funcionário - herda atributos da classe "Pessoa"
-
-class Funcionario : public Pessoa{
-    public:
-    char Cargo_Funcionario[40];
-    float Salario_Funcionario;
-
-};
-
-//classe estadia
-class Estadia{
-    int Codigo_Estadia;
-    int Quantidade_Diarias;
-    //codigo do cliente (herança)
-};
-
-//classe quarto
-class Quarto{
-    int NUmero_Quarto;
-    int quantidade_Hospedes;
-    float Valor_Diaria;
-    bool status_Quarto;
-};
-
-int main(){
-
-    do
-    {
-        /* code */
-    } while (/* condition */);
+int main() {
+    int opcao;
+    Cliente ClientesDoHotel[Max_Clientes]; //vetor para armazenar pessoas
+    //char Funcionarios[n];
     
-    printf("Cadastrar");
+    do {
+        cout << "Bem-Vindo!\n";
+        cout << "Escolha uma opcao: \n";
+        cout << "1 - Cadastrar Cliente\n";
+        cout << "2 - Cadastrar Funcionario\n";
+        cout << "3 - Obter Uma Estadia\n";
+        cout << "4 - Sair\n";
+        cin >> opcao;
+        cout << "-------------------------------------\n";
+
+        switch (opcao) {
+            case 1: {
+                // Implementar cadastro de cliente
+                break;
+            }
+            case 2: {
+                // Implementar cadastro de funcionário
+                break;
+            }
+            case 3: {
+                // Implementar obtenção de estadia
+                break;
+            }
+            default:
+                break;
+        }
+
+    } while (opcao != 4);
+
+    return 0;
 }
+
+
+/*
+void CadastrarClientes(Cliente listaClientes[Max_Clientes]){
+    char nome[80];
+    if(ContadorPessoas<Max_Clientes){
+        cout << "Cadastrando Clientes " << endl;
+        cout << "Insira seu nome: " <<endl;
+        cin >> nome;
+        fflush(stdin);
+        listaVeiculos[ContadorPessoas].setNome(nome);
+        listaVeiculos[ContadorPessoas].setCodigo(novoCodigo+1);
+    }
+}
+*/
