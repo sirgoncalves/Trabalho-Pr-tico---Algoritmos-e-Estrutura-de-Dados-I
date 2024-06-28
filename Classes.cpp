@@ -136,90 +136,34 @@ public:
 };
 
 //classe Cliente - herda de Pessoa
-class Cliente : public Pessoa, public Endereco{
+class Cliente : public Pessoa {
 private:
-    Endereco *endereco;
-    
-
-public:
-
-    Cliente(Endereco endereco){
-        this-> endereco = &endereco;
-    }
-
-     // Getters e Setters
-    void setEndereco(Endereco *x) { //consertar essa parte
-        x=0;
-    }
-};
-
-/*
-
-// Classe Pessoa
-class Pessoa {
-private:
-    char nome[80];
-    int codigo;
-    int telefone;
-    Endereco *endereco;
+    Endereco endereco;
 
 public:
     // Construtor padrão
-    Pessoa() {
-        strcpy(nome, "Nome Pessoa");
-        codigo = -1;
-        telefone = 0;
+    Cliente() {
+        // Chama o construtor padrão de Pessoa automaticamente
     }
 
-    //construtor sobrecarregado
-    Pessoa(char nome[80], int codigo, int telefone, Endereco endereco){
-        this-> codigo = codigo;
-        strcpy(this->nome, nome);
-        this-> telefone = telefone;
-        this-> endereco = &endereco;
-
-    }
-
+    // Construtor sobrecarregado
+    Cliente(const char* nome, int codigo, int telefone, const Endereco& endereco) {
+    setNome(nome);
+    setCodigo(codigo);
+    setTelefone(telefone);
+    this->endereco = endereco;
+}
 
     // Getters
-    const char* getNome() const {
-        return nome;
+    const Endereco& getEndereco() const {
+        return endereco;
     }
 
-    int getCodigo() const {
-        return codigo;
-    }
-
-    int getTelefone() const {
-        return telefone;
-    }
-
-    void setEndereco(Endereco *x) { //consertar essa parte
-        x=0;
-    }
-
-    // Setters
-    void setNome(const char* novoNome) {
-        strcpy(nome, novoNome);
-    }
-
-    void setCodigo(int novoCodigo) {
-        codigo = novoCodigo;
-    }
-
-    void setTelefone(int novoTelefone) {
-        telefone = novoTelefone;
-    }
-
-    void Mostrar(){
-        cout << " Nome Pessoa: " << nome ; //mostra o nome da pessoa
-        cout << " | Codigo da Pessoa: " << codigo << endl; //mostra o codigo da pessoa
-        //cout << "Telefone da pessoa: " << telefone << endl; //mostra o telefone da pessoa
+    // Setter
+    void setEndereco(const Endereco& endereco) {
+        this->endereco = endereco;
     }
 };
-*/
-
-
 
 // Classe Funcionario - herda de Pessoa
 class Funcionario : public Pessoa {
@@ -256,12 +200,6 @@ public:
 
     }
 };
-
-/*
-* ESTADIA = código da estadia, data de entrada, data de saída, quantidade de diárias, código do
-cliente, número do quarto
-* QUARTO = número do quarto, quantidade de hospedes, valor diária, status
-*/
 
 //classe data
 class Data{
@@ -313,8 +251,72 @@ public:
     }
 };
 
+//classe quarto
+class Quarto{
+private:
+
+    int NumeroQuarto;
+    int QuantidadeHospedes;
+    float ValorDiaria = 90.0;
+    bool status;
+
+public:
+    //construtor padrão
+    Quarto(){
+        NumeroQuarto = -1;
+        QuantidadeHospedes = 0;
+        ValorDiaria = 0.0f;
+        status = true;
+     }
+
+    //construtor sobrecarregado
+    Quarto(int NumeroQuarto, int QuantidadeHospedes, float ValorDiaria, bool status){
+        this->NumeroQuarto=NumeroQuarto;
+        this->QuantidadeHospedes=QuantidadeHospedes;
+        this->ValorDiaria=ValorDiaria;
+        this->status=status;
+    }
+
+    // Getters e Setters
+    int getNumeroQuarto() const {
+        return NumeroQuarto;
+    }
+
+    void setNumeroQuarto(int NumeroQuarto) {
+        this->NumeroQuarto = NumeroQuarto;
+    }
+
+    int getQuantidadeHospedes() const {
+        return QuantidadeHospedes;
+    }
+
+    void setQuantidadeHospedes(int QuantidadeHospedes) {
+        this->QuantidadeHospedes = QuantidadeHospedes;
+    }
+
+    float getValorDiaria() const {
+        return ValorDiaria;
+    }
+
+    void setValorDiaria(float ValorDiaria) {
+        this->ValorDiaria = ValorDiaria;
+    }
+
+    bool getStatus() const {
+        return status;
+    }
+
+    void setStatus(bool status) {
+        this->status = status;
+    }
+
+    void MostraQuarto(){
+        cout << "Numero do quarto: " << NumeroQuarto << endl;
+    }
+};
+
 //classe estadia
-class Estadia : public Data, public Cliente, public Quarto {
+class Estadia{
 private:
 
     int codigoEstadia;
@@ -407,71 +409,4 @@ public:
         this->numeroQuarto = numeroQuarto;
     }
 
-
-
-
-};
-
-//classe quarto
-class Quarto{
-private:
-
-    int NumeroQuarto;
-    int QuantidadeHospedes;
-    float ValorDiaria = 90.0;
-    bool status;
-
-public:
-    //construtor padrão
-    Quarto(){
-        NumeroQuarto = -1;
-        QuantidadeHospedes = 0;
-        ValorDiaria = 0.0f;
-        status = true;
-     }
-
-    //construtor sobrecarregado
-    Quarto(int NumeroQuarto, int QuantidadeHospedes, float ValorDiaria, bool status){
-        this->NumeroQuarto=NumeroQuarto;
-        this->QuantidadeHospedes=QuantidadeHospedes;
-        this->ValorDiaria=ValorDiaria;
-        this->status=status;
-    }
-
-    // Getters e Setters
-    int getNumeroQuarto() const {
-        return NumeroQuarto;
-    }
-
-    void setNumeroQuarto(int NumeroQuarto) {
-        this->NumeroQuarto = NumeroQuarto;
-    }
-
-    int getQuantidadeHospedes() const {
-        return QuantidadeHospedes;
-    }
-
-    void setQuantidadeHospedes(int QuantidadeHospedes) {
-        this->QuantidadeHospedes = QuantidadeHospedes;
-    }
-
-    float getValorDiaria() const {
-        return ValorDiaria;
-    }
-
-    void setValorDiaria(float ValorDiaria) {
-        this->ValorDiaria = ValorDiaria;
-    }
-
-    bool getStatus() const {
-        return status;
-    }
-
-    void setStatus(bool status) {
-        this->status = status;
-    }
-
-    void MostraQuarto(){
-        cout << "Numero do quarto: " << NumeroQuarto << endl;
-    }
 };
