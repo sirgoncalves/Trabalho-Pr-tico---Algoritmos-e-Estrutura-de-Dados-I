@@ -1,5 +1,17 @@
-#include "Classes.cpp"
+#include "Classes.h"
 #include <iostream>
+#include <string.h> // Para strcpy
+#include <stdio.h>
+#define Max_Clientes 100 //definindo a quantidade máxima de clientes
+#define Max_Funcionarios 20 //definindo a quantidade máxima de funcionários (proporção de 2 funcionários para cada 10 clientes)
+#define Max_Quartos 100 //quantidade máxima de quartos disponíveis no hotel (deve ser igual à quantidade máxima de clientes)
+#define Max_estadias 100 // quantidade máxima de estadias (igual à quatidade de quartos)
+int ContadorPessoas=0; //contador de pessoas
+int ContadorQuartos=0;
+int ContadorFuncionarios=0;
+int ContadorEstadias=0;
+using namespace std;
+using namespace std;
 
 void CadastrarClientes(Cliente listaClientes[Max_Clientes]) {
     if (ContadorPessoas < Max_Clientes) {
@@ -275,19 +287,4 @@ void MostrarEstadias(){
 
 }
 
-/*
-procedimento antigo (não funciona)
-
-void ListarQuartosDisponiveis(Quarto listaQuartos[Max_Quartos], int numero){
-    int cont=0;
-    Quarto *verificar = VerificaOcupacao(listaQuartos, numero);
-    cout << "Lista de quartos disponiveis do hotel: "<<endl;
-    for(int i=0;i<ContadorQuartos;i++){
-        if(verificar!=NULL){
-           //cout << "Numero do quarto: ";
-        }
-    }
-}
-
-*/
 
