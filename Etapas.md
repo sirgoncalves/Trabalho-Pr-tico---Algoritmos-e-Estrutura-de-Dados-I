@@ -3,12 +3,15 @@
 ## Criação de classes
 Status: feito
 
-Detalhamento: 
-CLIENTE = código, nome, endereço, telefone
-FUNCIONARIO = código, nome, telefone, cargo, salário
+### Detalhamento: 
+CLIENTE = código, nome, endereço, telefone;
+
+FUNCIONARIO = código, nome, telefone, cargo, salário;
+
 ESTADIA = código da estadia, data de entrada, data de saída, quantidade de diárias, código do
-cliente, número do quarto
-QUARTO = número do quarto, quantidade de hospedes, valor diária, status
+cliente, número do quarto;
+
+QUARTO = número do quarto, quantidade de hospedes, valor diária, status;
 
 ## Função para CADASTRAR CLIENTES
 Status: feito
@@ -31,8 +34,8 @@ Status: ainda não feito
 ## Função CALCULA PONTOS DE FIDELIDADE
 Status: ainda não feito
 
-#Armazenar informações em arquivos binários:
+## Armazenar informações em arquivos binários:
 Status: ainda não feito
 
-#Função main:
+## Função main:
 Status: feito
