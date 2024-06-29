@@ -1,6 +1,6 @@
-##Etapas do projeto
+## Etapas do projeto
 
-#Criação de classes
+# Criação de classes
 Status: feito
 
 Detalhamento: 
@@ -10,25 +10,25 @@ ESTADIA = código da estadia, data de entrada, data de saída, quantidade de di�
 cliente, número do quarto
 QUARTO = número do quarto, quantidade de hospedes, valor diária, status
 
-#Função para CADASTRAR CLIENTES: 
+# Função para CADASTRAR CLIENTES
 Status: feito
 
-#Função para CADASTRAR FUNCIONÁRIOS:
+# Função para CADASTRAR FUNCIONÁRIOS
 Status: feito
 
-#Função para CADASTRAR ESTADIA:
+# Função para CADASTRAR ESTADIA
 Status: feito
 
-#Função para DAR BAIXA EM ESTADIA e CALCULAR O VALOR A SER PAGO:
+# Função para DAR BAIXA EM ESTADIA e CALCULAR O VALOR A SER PAGO
 Status: ainda não feito
 
-#Função para PESQUISA DE CLIENTE E FUNCIONÁRIO:
+# Função para PESQUISA DE CLIENTE E FUNCIONÁRIO
 Status: feito
 
-#Função para MOSTRAR ESTADIAS DE UM DETERMINADO CLIENTE:
+# Função para MOSTRAR ESTADIAS DE UM DETERMINADO CLIENTE
 Status: ainda não feito
 
-#Função CALCULA PONTOS DE FIDELIDADE:
+# Função CALCULA PONTOS DE FIDELIDADE
 Status: ainda não feito
 
 #Armazenar informações em arquivos binários:
