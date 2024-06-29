@@ -33,3 +33,6 @@ Status: ainda não feito
 
 #Armazenar informações em arquivos binários:
 Status: ainda não feito
+
+#Função main:
+Status: feito
