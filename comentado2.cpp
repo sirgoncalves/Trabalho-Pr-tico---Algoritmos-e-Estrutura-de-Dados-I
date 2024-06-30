@@ -322,8 +322,7 @@ private:
       while (!file.eof()) {
         Funcionario funcionario(
             0, "", "", "", 0.0); // Funcionário temporário para carregar dados
-        funcionario.carregar(
-            file); // Chama o método carregar de cada funcionário
+        funcionario.carregar(file); // Chama o método carregar de cada funcionário
         if (!file.eof()) {
           funcionarios.push_back(funcionario); // Adiciona funcionário ao vetor
         }
@@ -569,10 +568,9 @@ public:
 
   // Método para dar baixa em uma estadia pelo código da estadia
   void darBaixaEstadia(int codigoEstadia) {
-    auto it = std::find_if(estadias.begin(), estadias.end(),
-                           [codigoEstadia](const Estadia &estadia) {
-                             return estadia.getCodigoEstadia() == codigoEstadia;
-                           });
+    auto it = std::find_if(estadias.begin(), estadias.end(),[codigoEstadia](const Estadia &estadia) {
+        return estadia.getCodigoEstadia() == codigoEstadia;
+    });
 
     if (it != estadias.end()) {
       int numeroQuarto = it->getNumeroQuarto();
@@ -645,10 +643,9 @@ public:
                                            int codigo) const {
     if (codigo != 0) {
       auto it = std::find_if(funcionarios.begin(), funcionarios.end(),
-                             [codigo](const Funcionario &funcionario) {
-                               return funcionario.getCodigo() == codigo;
-                             });
-
+      [codigo](const Funcionario &funcionario) {
+      return funcionario.getCodigo() == codigo;
+    });
       if (it != funcionarios.end()) {
         std::cout << "Funcionário encontrado: " << it->getNome()
                   << ", Telefone: " << it->getTelefone()
@@ -697,8 +694,7 @@ public:
     }
   }
 
-  // Método para calcular pontos de fidelidade de um cliente pelo código do
-  // cliente
+  // Método para calcular pontos de fidelidade de um cliente pelo código do cliente
   int calcularPontosFidelidade(int codigoCliente) const {
     int pontos = 0;
     for (const auto &estadia : estadias) {
@@ -806,8 +802,7 @@ int main() {
       int codigoEstadia;
       std::cout << "Código da Estadia: ";
       std::cin >> codigoEstadia;            // Lê o código da estadia
-      hotel.darBaixaEstadia(codigoEstadia); // Chama o método para dar baixa na
-                                            // estadia na classe Hotel
+      hotel.darBaixaEstadia(codigoEstadia); // Chama o método para dar baixa na estadia na classe Hotel
       break;
     }
     case 6: { // Opção para pesquisar cliente por nome ou código
@@ -843,8 +838,7 @@ int main() {
       std::cout << "Código do Cliente: ";
       std::cin >> codigoCliente; // Lê o código do cliente
       hotel.mostrarEstadiasCliente(
-          codigoCliente); // Chama o método para mostrar estadias na classe
-                          // Hotel
+          codigoCliente); // Chama o método para mostrar estadias na classe Hotel
       break;
     }
     case 9: { // Opção para calcular pontos de fidelidade de um cliente
@@ -853,39 +847,32 @@ int main() {
       std::cin >> codigoCliente; // Lê o código do cliente
       std::cout << "Pontos de Fidelidade do Cliente: "
                 << hotel.calcularPontosFidelidade(codigoCliente)
-                << std::endl; // Chama o método para calcular pontos de
-                              // fidelidade na classe Hotel
+                << std::endl; // Chama o método para calcular pontos de fidelidade na classe Hotel
       break;
     }
     case 10: {                     // Opção para mostrar lista de quartos
-      hotel.mostrarListaQuartos(); // Chama o método para mostrar a lista de
-                                   // quartos na classe Hotel
+      hotel.mostrarListaQuartos(); // Chama o método para mostrar a lista de quartos na classe Hotel
       break;
     }
     case 11: {                    // Opção para listar funcionários
-      hotel.listarFuncionarios(); // Chama o método para listar funcionários na
-                                  // classe Hotel
+      hotel.listarFuncionarios(); // Chama o método para listar funcionários na classe Hotel
       break;
     }
     case 12: { // Opção para remover funcionário
       int codigo;
       std::cout << "Digite o código do funcionário a ser removido: ";
       std::cin >> codigo; // Lê o código do funcionário a ser removido
-      hotel.deletarFuncionario(
-          codigo); // Chama o método para remover funcionário na classe Hotel
+      hotel.deletarFuncionario(codigo); // Chama o método para remover funcionário na classe Hotel
       break;
     }
     case 13: { // Opção para remover cliente
       int codigo;
       std::cout << "Digite o código do cliente a ser removido: ";
-      std::cin >> codigo; // Lê o código do cliente a ser removido
-      hotel.deletarCliente(
-          codigo); // Chama o método para remover cliente na classe Hotel
+      std::cin >> codigo; // Lê o código do cliente a ser removido hotel.deletarCliente(codigo); // Chama o método para remover cliente na classe Hotel
       break;
     }
     case 14: {                // Opção para listar clientes
-      hotel.listarClientes(); // Chama o método para listar clientes na classe
-                              // Hotel
+      hotel.listarClientes(); // Chama o método para listar clientes na classe Hotel
       break;
     }
     case 0: // Opção para sair do programa
@@ -894,7 +881,7 @@ int main() {
     default: // Tratamento de opção inválida
       std::cout << "Opção inválida!\n";
     }
-  } while (opcao != 0); // Continua executando o loop enquanto a opção escolhida
-                        // não for 0 (sair do programa)
+  } while (opcao != 0); // Continua executando o loop enquanto a opção escolhida não for 0 (sair do programa)
+  
   return 0; 
 }
