@@ -1,0 +1,124 @@
+# depslib dependency file v1.0
+1719836860 source:c:\users\mashiro\downloads\a\a\src\pessoa.cpp
+	"Pessoa.h"
+
+1719814710 c:\users\mashiro\downloads\a\a\include\pessoa.h
+	<string>
+	<sstream>
+
+1719839497 source:c:\users\mashiro\downloads\a\a\main.cpp
+	<algorithm>
+	<fstream>
+	<iomanip>
+	<iostream>
+	<sstream>
+	<string>
+	<vector>
+	"Pessoa.h"
+	"Cliente.h"
+	"Funcionario.h"
+	"Quarto.h"
+	"Estadia.h"
+	"Hotel.h"
+
+1719814702 c:\users\mashiro\downloads\a\a\include\cliente.h
+	"Pessoa.h"
+
+1719812570 source:c:\users\mashiro\downloads\a\a\src\cliente.cpp
+	"Cliente.h"
+
+1719813862 source:c:\users\mashiro\downloads\a\a\src\funcionario.cpp
+	"Funcionario.h"
+
+1719814808 c:\users\mashiro\downloads\a\a\include\funcionario.h
+	"Pessoa.h"
+
+1719815360 c:\users\mashiro\downloads\a\a\include\quarto.h
+	<string>
+	<sstream>
+
+1719815487 source:c:\users\mashiro\downloads\a\a\src\quarto.cpp
+	"Quarto.h"
+
+1719816244 c:\users\mashiro\downloads\a\a\include\estadia.h
+	<string>
+	<sstream>
+
+1719816289 source:c:\users\mashiro\downloads\a\a\src\estadia.cpp
+	"Estadia.h"
+
+1719840570 c:\users\mashiro\downloads\a\a\include\hotel.h
+	<algorithm>
+	<fstream>
+	<iomanip>
+	<iostream>
+	<sstream>
+	<string>
+	<vector>
+	"Pessoa.h"
+	"Cliente.h"
+	"Funcionario.h"
+	"Quarto.h"
+	"Estadia.h"
+
+1719840856 source:c:\users\mashiro\downloads\a\a\src\hotel.cpp
+	"Hotel.h"
+
+1719841293 source:c:\users\mashiro\desktop\projetoaeds\main.cpp
+	"Pessoa.h"
+	"Cliente.h"
+	"Funcionario.h"
+	"Quarto.h"
+	"Estadia.h"
+	"Hotel.h"
+
+1719814710 c:\users\mashiro\desktop\projetoaeds\include\pessoa.h
+	<string>
+	<sstream>
+
+1719814702 c:\users\mashiro\desktop\projetoaeds\include\cliente.h
+	"Pessoa.h"
+
+1719814808 c:\users\mashiro\desktop\projetoaeds\include\funcionario.h
+	"Pessoa.h"
+
+1719815360 c:\users\mashiro\desktop\projetoaeds\include\quarto.h
+	<string>
+	<sstream>
+
+1719816244 c:\users\mashiro\desktop\projetoaeds\include\estadia.h
+	<string>
+	<sstream>
+
+1719840570 c:\users\mashiro\desktop\projetoaeds\include\hotel.h
+	<algorithm>
+	<fstream>
+	<iomanip>
+	<iostream>
+	<sstream>
+	<string>
+	<vector>
+	"Pessoa.h"
+	"Cliente.h"
+	"Funcionario.h"
+	"Quarto.h"
+	"Estadia.h"
+
+1719812570 source:c:\users\mashiro\desktop\projetoaeds\src\cliente.cpp
+	"Cliente.h"
+
+1719816289 source:c:\users\mashiro\desktop\projetoaeds\src\estadia.cpp
+	"Estadia.h"
+
+1719813862 source:c:\users\mashiro\desktop\projetoaeds\src\funcionario.cpp
+	"Funcionario.h"
+
+1719840856 source:c:\users\mashiro\desktop\projetoaeds\src\hotel.cpp
+	"Hotel.h"
+
+1719836860 source:c:\users\mashiro\desktop\projetoaeds\src\pessoa.cpp
+	"Pessoa.h"
+
+1719815487 source:c:\users\mashiro\desktop\projetoaeds\src\quarto.cpp
+	"Quarto.h"
+
